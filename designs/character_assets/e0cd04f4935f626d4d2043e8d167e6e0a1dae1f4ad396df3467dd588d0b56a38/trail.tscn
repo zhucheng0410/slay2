@@ -1,0 +1,9 @@
+[gd_scene format=3]
+
+[node name="IndependentCardTrail" type="Node2D"]
+
+[node name="Sprites" type="Node2D" parent="."]
+
+[node name="Spark" type="Polygon2D" parent="Sprites"]
+polygon = PackedVector2Array(-10, 0, 0, -16, 10, 0, 0, 16)
+color = Color(0.46, 0.81, 0.77, 0.8)

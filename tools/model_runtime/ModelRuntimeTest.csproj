@@ -1,0 +1,17 @@
+<Project Sdk="Godot.NET.Sdk/4.5.1">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <GameDir Condition="'$(GameDir)' == ''">E:/steam/steamapps/common/Slay the Spire 2/data_sts2_windows_x86_64</GameDir>
+    <RitsuLibDir Condition="'$(RitsuLibDir)' == ''">../../../RitsuLib</RitsuLibDir>
+    <RitsuLibReferenceTarget>0.107.1</RitsuLibReferenceTarget>
+  </PropertyGroup>
+  <Import Project="$(RitsuLibDir)/RitsuLib.References.props" />
+  <ItemGroup>
+    <Reference Include="sts2" HintPath="$(GameDir)/sts2.dll" Private="true" />
+    <Reference Include="0Harmony" HintPath="$(GameDir)/0Harmony.dll" Private="true" />
+    <Reference Include="ForgeModelProbe" HintPath="../../exports/_modeltest/ForgeModelProbe/ForgeModelProbe.dll" Private="true" />
+    <Reference Update="STS2-RitsuLib;STS2-RitsuLib.Runtime;STS2-RitsuLib.Shared;STS2-RitsuLib.Ui;STS2-RitsuLib.Settings" Private="true" />
+  </ItemGroup>
+</Project>

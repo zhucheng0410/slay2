@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[sub_resource type="Shader" id="Fade"]
+code = "shader_type canvas_item;\nuniform float threshold : hint_range(0.0, 1.0) = 1.0;\nvoid fragment() { COLOR = vec4(0.025, 0.07, 0.075, threshold); }\n"
+
+[resource]
+resource_local_to_scene = true
+shader = SubResource("Fade")
+shader_parameter/threshold = 1.0

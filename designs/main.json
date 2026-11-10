@@ -1,0 +1,1452 @@
+{
+  "abilities": [],
+  "cards": [
+    {
+      "art": {
+        "atlas": "images/atlases/card_atlas.sprites/wwwcard/wudi.tres",
+        "portrait": "images/packed/card_portraits/wwwcard/wudi.png",
+        "use_auto": true
+      },
+      "cost": 0.0,
+      "created": "2026-10-13T11:33:13",
+      "deck": {
+        "character": "www",
+        "copies": 1.0,
+        "enabled": false
+      },
+      "effects": [
+        {
+          "amount": 0.0,
+          "amount_is_var": true,
+          "amount_var": "power",
+          "card_entry": "",
+          "condition": {
+            "left": "",
+            "mode": "none",
+            "note": "",
+            "op": ">=",
+            "right": "0.0"
+          },
+          "enabled": true,
+          "hits": 1.0,
+          "id": "669212629_48400",
+          "keyword": "Exhaust",
+          "kind": "apply_power",
+          "loop": {
+            "count": 1.0,
+            "mode": "count",
+            "var": ""
+          },
+          "note": "",
+          "pile": "Draw",
+          "position": "Bottom",
+          "power": "VulnerablePower",
+          "target": "all_enemies",
+          "value_prop": ""
+        },
+        {
+          "amount": 0.0,
+          "amount_is_var": true,
+          "amount_var": "Weak",
+          "card_entry": "",
+          "condition": {
+            "left": "",
+            "mode": "none",
+            "note": "",
+            "op": ">=",
+            "right": "0.0"
+          },
+          "enabled": true,
+          "hits": 1.0,
+          "id": "312593966_7570",
+          "keyword": "Exhaust",
+          "kind": "apply_power",
+          "loop": {
+            "count": 1.0,
+            "mode": "count",
+            "var": ""
+          },
+          "note": "",
+          "pile": "Draw",
+          "position": "Bottom",
+          "power": "WeakPower",
+          "target": "all_enemies",
+          "value_prop": ""
+        },
+        {
+          "amount": 0.0,
+          "amount_is_var": true,
+          "amount_var": "Value3",
+          "card_entry": "",
+          "condition": {
+            "left": "",
+            "mode": "none",
+            "note": "",
+            "op": ">=",
+            "right": "0.0"
+          },
+          "enabled": true,
+          "hits": 1.0,
+          "id": "840730490_87568",
+          "keyword": "Exhaust",
+          "kind": "apply_power",
+          "loop": {
+            "count": 1.0,
+            "mode": "count",
+            "var": ""
+          },
+          "note": "",
+          "pile": "Draw",
+          "position": "Bottom",
+          "power": "IntangiblePower",
+          "target": "self",
+          "value_prop": ""
+        },
+        {
+          "amount": 0.0,
+          "amount_is_var": true,
+          "amount_var": "Value4",
+          "card_entry": "",
+          "condition": {
+            "left": "",
+            "mode": "none",
+            "note": "",
+            "op": ">=",
+            "right": "0.0"
+          },
+          "enabled": true,
+          "hits": 1.0,
+          "id": "62624570_25764",
+          "keyword": "Exhaust",
+          "kind": "block",
+          "loop": {
+            "count": 1.0,
+            "mode": "count",
+            "var": ""
+          },
+          "note": "",
+          "pile": "Draw",
+          "position": "Bottom",
+          "power": "",
+          "target": "self",
+          "value_prop": ""
+        },
+        {
+          "amount": 0.0,
+          "amount_is_var": true,
+          "amount_var": "Value5",
+          "card_entry": "",
+          "condition": {
+            "left": "",
+            "mode": "none",
+            "note": "",
+            "op": ">=",
+            "right": ""
+          },
+          "enabled": true,
+          "hits": 1.0,
+          "id": "106222772_14335",
+          "keyword": "Exhaust",
+          "kind": "apply_power",
+          "loop": {
+            "count": 1.0,
+            "mode": "count",
+            "var": ""
+          },
+          "note": "",
+          "pile": "Draw",
+          "position": "Bottom",
+          "power": "RegenPower",
+          "target": "self",
+          "value_prop": ""
+        }
+      ],
+      "entry": "WUDI",
+      "flags": {
+        "gains_block": true,
+        "show_in_card_library": true
+      },
+      "has_x_cost": false,
+      "id": "wudi",
+      "keywords": [
+        "Exhaust"
+      ],
+      "kind": "card",
+      "max_upgrade_level": 1.0,
+      "modified": "2026-10-20T20:47:16",
+      "notes": "",
+      "pool": "wwwcard",
+      "rarity": "Common",
+      "star_cost": -1.0,
+      "tags": [],
+      "target": "AllEnemies",
+      "text": {
+        "eng": {
+          "description": "给予{power:diff()}层易伤\n给予{Weak:diff()}层虚弱.\n给予{Value3:diff()}层无实体.\n给予{Value5:diff()}点再生.",
+          "title": "wowudile"
+        },
+        "zhs": {
+          "description": "给予{power:diff()}层易伤.\n给予{Weak:diff()}层虚弱.\n给予{Value4:diff()}点格挡\n给予{Value3:diff()}层无实体.\n给予{Value5:diff()}点再生.\n",
+          "title": "我无敌了"
+        }
+      },
+      "type": "Skill",
+      "upgrade": {
+        "cost_delta": 0.0,
+        "keywords_add": [],
+        "keywords_remove": [
+          "Exhaust"
+        ],
+        "text_override": {
+          "eng": {
+            "description": "",
+            "title": ""
+          },
+          "zhs": {
+            "description": "",
+            "title": ""
+          }
+        },
+        "var_deltas": []
+      },
+      "vars": [
+        {
+          "base": 2.0,
+          "generic": "VulnerablePower",
+          "kind": "Power",
+          "name": "power",
+          "type": "PowerVar",
+          "upgrade_delta": 1.0,
+          "value_prop": ""
+        },
+        {
+          "base": 2.0,
+          "generic": "WeakPower",
+          "kind": "Power",
+          "name": "Weak",
+          "type": "PowerVar",
+          "upgrade_delta": 1.0,
+          "value_prop": ""
+        },
+        {
+          "base": 1.0,
+          "generic": "IntangiblePower",
+          "kind": "Power",
+          "name": "Value3",
+          "type": "PowerVar",
+          "upgrade_delta": 0.0,
+          "value_prop": ""
+        },
+        {
+          "base": 20.0,
+          "generic": "",
+          "kind": "Block",
+          "name": "Value4",
+          "type": "BlockVar",
+          "upgrade_delta": 10.0,
+          "value_prop": ""
+        },
+        {
+          "base": 6.0,
+          "generic": "RegenPower",
+          "kind": "Power",
+          "name": "Value5",
+          "type": "PowerVar",
+          "upgrade_delta": 6.0,
+          "value_prop": ""
+        }
+      ]
+    },
+    {
+      "art": {
+        "atlas": "images/atlases/card_atlas.sprites/wwwcard/new_card1.tres",
+        "portrait": "images/packed/card_portraits/wwwcard/new_card1.png",
+        "use_auto": true
+      },
+      "cost": 1.0,
+      "created": "2026-10-19T20:18:06",
+      "deck": {
+        "character": "www",
+        "copies": 5.0,
+        "enabled": false
+      },
+      "effects": [
+        {
+          "amount": 0.0,
+          "amount_is_var": true,
+          "amount_var": "Damage",
+          "card_entry": "",
+          "condition": {
+            "left": "",
+            "mode": "none",
+            "note": "",
+            "op": ">=",
+            "right": ""
+          },
+          "enabled": true,
+          "hits": 1.0,
+          "id": "88450361_80217",
+          "keyword": "Exhaust",
+          "kind": "damage",
+          "loop": {
+            "count": 1.0,
+            "mode": "count",
+            "var": ""
+          },
+          "note": "",
+          "pile": "Draw",
+          "position": "Bottom",
+          "power": "",
+          "target": "card_target",
+          "value_prop": ""
+        }
+      ],
+      "entry": "NEW_CARD1",
+      "flags": {
+        "gains_block": false,
+        "show_in_card_library": true
+      },
+      "has_x_cost": false,
+      "id": "NewCard1",
+      "keywords": [],
+      "kind": "card",
+      "max_upgrade_level": 3.0,
+      "modified": "2026-10-20T20:47:16",
+      "notes": "",
+      "pool": "wwwcard",
+      "rarity": "Common",
+      "star_cost": -1.0,
+      "tags": [
+        "Strike"
+      ],
+      "target": "AnyEnemy",
+      "text": {
+        "eng": {
+          "description": "",
+          "title": "NewCard"
+        },
+        "zhs": {
+          "description": "造成{Damage:diff()}点伤害",
+          "title": "打击"
+        }
+      },
+      "type": "Attack",
+      "upgrade": {
+        "cost_delta": 0.0,
+        "keywords_add": [],
+        "keywords_remove": [],
+        "text_override": {
+          "eng": {
+            "description": "",
+            "title": ""
+          },
+          "zhs": {
+            "description": "",
+            "title": ""
+          }
+        },
+        "var_deltas": []
+      },
+      "vars": [
+        {
+          "base": 6.0,
+          "generic": "",
+          "kind": "Damage",
+          "name": "Damage",
+          "type": "DamageVar",
+          "upgrade_delta": 4.0,
+          "value_prop": ""
+        }
+      ]
+    },
+    {
+      "art": {
+        "atlas": "images/atlases/card_atlas.sprites/wwwcard/new_card2.tres",
+        "portrait": "images/packed/card_portraits/wwwcard/new_card2.png",
+        "use_auto": true
+      },
+      "cost": 1.0,
+      "created": "2026-10-19T20:40:34",
+      "deck": {
+        "character": "www",
+        "copies": 1.0,
+        "enabled": false
+      },
+      "effects": [
+        {
+          "amount": 0.0,
+          "amount_is_var": true,
+          "amount_var": "blockVar",
+          "card_entry": "",
+          "condition": {
+            "left": "",
+            "mode": "none",
+            "note": "",
+            "op": ">=",
+            "right": ""
+          },
+          "enabled": true,
+          "hits": 1.0,
+          "id": "190012325_6090",
+          "keyword": "Exhaust",
+          "kind": "block",
+          "loop": {
+            "count": 1.0,
+            "mode": "count",
+            "var": ""
+          },
+          "note": "",
+          "pile": "Draw",
+          "position": "Bottom",
+          "power": "",
+          "target": "self",
+          "value_prop": ""
+        }
+      ],
+      "entry": "NEW_CARD2",
+      "flags": {
+        "gains_block": true,
+        "show_in_card_library": true
+      },
+      "has_x_cost": false,
+      "id": "NewCard2",
+      "keywords": [],
+      "kind": "card",
+      "max_upgrade_level": 1.0,
+      "modified": "2026-10-20T20:47:16",
+      "notes": "",
+      "pool": "wwwcard",
+      "rarity": "Common",
+      "star_cost": -1.0,
+      "tags": [],
+      "target": "Self",
+      "text": {
+        "eng": {
+          "description": "",
+          "title": "defend"
+        },
+        "zhs": {
+          "description": "给予{blockVar:diff()}点格挡",
+          "title": "防御"
+        }
+      },
+      "type": "Attack",
+      "upgrade": {
+        "cost_delta": 0.0,
+        "keywords_add": [],
+        "keywords_remove": [],
+        "text_override": {
+          "eng": {
+            "description": "",
+            "title": ""
+          },
+          "zhs": {
+            "description": "",
+            "title": ""
+          }
+        },
+        "var_deltas": []
+      },
+      "vars": [
+        {
+          "base": 5.0,
+          "generic": "",
+          "kind": "Block",
+          "name": "blockVar",
+          "type": "BlockVar",
+          "upgrade_delta": 4.0,
+          "value_prop": ""
+        }
+      ]
+    },
+    {
+      "art": {
+        "atlas": "images/atlases/card_atlas.sprites/wwwcard/new_card3.tres",
+        "portrait": "images/packed/card_portraits/wwwcard/new_card3.png",
+        "use_auto": true
+      },
+      "cost": 1.0,
+      "created": "2026-10-20T20:11:07",
+      "deck": {
+        "character": "",
+        "copies": 1.0,
+        "enabled": false
+      },
+      "effects": [
+        {
+          "amount": 0.0,
+          "amount_is_var": true,
+          "amount_var": "Str",
+          "card_entry": "",
+          "condition": {
+            "left": "",
+            "mode": "none",
+            "note": "",
+            "op": ">=",
+            "right": ""
+          },
+          "enabled": true,
+          "hits": 1.0,
+          "id": "179047139_33643",
+          "keyword": "Exhaust",
+          "kind": "apply_power",
+          "loop": {
+            "count": 1.0,
+            "mode": "count",
+            "var": ""
+          },
+          "note": "",
+          "pile": "Draw",
+          "position": "Bottom",
+          "power": "StrengthPower",
+          "target": "self",
+          "value_prop": ""
+        }
+      ],
+      "entry": "NEW_CARD3",
+      "flags": {
+        "gains_block": false,
+        "show_in_card_library": true
+      },
+      "has_x_cost": false,
+      "id": "NewCard3",
+      "keywords": [
+        "Exhaust"
+      ],
+      "kind": "card",
+      "max_upgrade_level": 1.0,
+      "modified": "2026-10-20T20:47:16",
+      "notes": "",
+      "pool": "wwwcard",
+      "rarity": "Rare",
+      "star_cost": -1.0,
+      "tags": [],
+      "target": "Self",
+      "text": {
+        "eng": {
+          "description": "",
+          "title": "NewCard"
+        },
+        "zhs": {
+          "description": "给予自己{Str:diff()}点力量",
+          "title": "Power！！！"
+        }
+      },
+      "type": "Skill",
+      "upgrade": {
+        "cost_delta": 0.0,
+        "keywords_add": [],
+        "keywords_remove": [
+          "Exhaust"
+        ],
+        "text_override": {
+          "eng": {
+            "description": "",
+            "title": ""
+          },
+          "zhs": {
+            "description": "",
+            "title": ""
+          }
+        },
+        "var_deltas": []
+      },
+      "vars": [
+        {
+          "base": 3.0,
+          "generic": "StrengthPower",
+          "kind": "Power",
+          "name": "Str",
+          "type": "PowerVar",
+          "upgrade_delta": 3.0,
+          "value_prop": ""
+        }
+      ]
+    },
+    {
+      "art": {
+        "atlas": "images/atlases/card_atlas.sprites/wwwcard/new_card.tres",
+        "portrait": "images/packed/card_portraits/wwwcard/new_card.png",
+        "use_auto": true
+      },
+      "cost": 1.0,
+      "created": "2026-10-20T20:13:54",
+      "deck": {
+        "character": "",
+        "copies": 1.0,
+        "enabled": false
+      },
+      "effects": [
+        {
+          "amount": 0.0,
+          "amount_is_var": true,
+          "amount_var": "Dex",
+          "card_entry": "",
+          "condition": {
+            "left": "",
+            "mode": "none",
+            "note": "",
+            "op": ">=",
+            "right": ""
+          },
+          "enabled": true,
+          "hits": 1.0,
+          "id": "296625996_23699",
+          "keyword": "Exhaust",
+          "kind": "apply_power",
+          "loop": {
+            "count": 1.0,
+            "mode": "count",
+            "var": ""
+          },
+          "note": "",
+          "pile": "Draw",
+          "position": "Bottom",
+          "power": "DexterityPower",
+          "target": "self",
+          "value_prop": ""
+        }
+      ],
+      "entry": "NEW_CARD",
+      "flags": {
+        "gains_block": false,
+        "show_in_card_library": true
+      },
+      "has_x_cost": false,
+      "id": "NewCard",
+      "keywords": [
+        "Exhaust"
+      ],
+      "kind": "card",
+      "max_upgrade_level": 1.0,
+      "modified": "2026-10-20T20:47:16",
+      "notes": "",
+      "pool": "wwwcard",
+      "rarity": "Rare",
+      "star_cost": -1.0,
+      "tags": [],
+      "target": "Self",
+      "text": {
+        "eng": {
+          "description": "",
+          "title": "NewCard"
+        },
+        "zhs": {
+          "description": "给予自己{Dex:diff()}点敏捷",
+          "title": "迅雷如风"
+        }
+      },
+      "type": "Skill",
+      "upgrade": {
+        "cost_delta": 0.0,
+        "keywords_add": [],
+        "keywords_remove": [
+          "Exhaust"
+        ],
+        "text_override": {
+          "eng": {
+            "description": "",
+            "title": ""
+          },
+          "zhs": {
+            "description": "",
+            "title": ""
+          }
+        },
+        "var_deltas": []
+      },
+      "vars": [
+        {
+          "base": 3.0,
+          "generic": "DexterityPower",
+          "kind": "Power",
+          "name": "Dex",
+          "type": "PowerVar",
+          "upgrade_delta": 3.0,
+          "value_prop": ""
+        }
+      ]
+    },
+    {
+      "art": {
+        "atlas": "images/atlases/card_atlas.sprites/wwwcard/new_card4.tres",
+        "portrait": "images/packed/card_portraits/wwwcard/new_card4.png",
+        "use_auto": true
+      },
+      "cost": 1.0,
+      "created": "2026-10-20T20:26:08",
+      "deck": {
+        "character": "",
+        "copies": 1.0,
+        "enabled": false
+      },
+      "effects": [
+        {
+          "amount": 0.0,
+          "amount_is_var": true,
+          "amount_var": "Ser",
+          "card_entry": "",
+          "condition": {
+            "left": "",
+            "mode": "none",
+            "note": "",
+            "op": ">=",
+            "right": ""
+          },
+          "enabled": true,
+          "hits": 1.0,
+          "id": "123323148_50607",
+          "keyword": "Exhaust",
+          "kind": "apply_power",
+          "loop": {
+            "count": 1.0,
+            "mode": "none",
+            "var": ""
+          },
+          "note": "",
+          "pile": "Draw",
+          "position": "Bottom",
+          "power": "SerpentFormPower",
+          "target": "self",
+          "value_prop": ""
+        }
+      ],
+      "entry": "NEW_CARD4",
+      "flags": {
+        "gains_block": false,
+        "show_in_card_library": true
+      },
+      "has_x_cost": false,
+      "id": "NewCard4",
+      "keywords": [],
+      "kind": "card",
+      "max_upgrade_level": 1.0,
+      "modified": "2026-10-20T20:47:16",
+      "notes": "",
+      "pool": "wwwcard",
+      "rarity": "Uncommon",
+      "star_cost": -1.0,
+      "tags": [],
+      "target": "Self",
+      "text": {
+        "eng": {
+          "description": "",
+          "title": "NewCard4"
+        },
+        "zhs": {
+          "description": "给予{Ser:diff()}层群蛇形态",
+          "title": "我说来一张群蛇形态"
+        }
+      },
+      "type": "Power",
+      "upgrade": {
+        "cost_delta": 0.0,
+        "keywords_add": [],
+        "keywords_remove": [],
+        "text_override": {
+          "eng": {
+            "description": "",
+            "title": ""
+          },
+          "zhs": {
+            "description": "",
+            "title": ""
+          }
+        },
+        "var_deltas": []
+      },
+      "vars": [
+        {
+          "base": 6.0,
+          "generic": "SerpentFormPower",
+          "kind": "Power",
+          "name": "Ser",
+          "type": "PowerVar",
+          "upgrade_delta": 3.0,
+          "value_prop": ""
+        }
+      ]
+    },
+    {
+      "art": {
+        "atlas": "images/atlases/card_atlas.sprites/wwwcard/new_card5.tres",
+        "portrait": "images/packed/card_portraits/wwwcard/new_card5.png",
+        "use_auto": true
+      },
+      "cost": 1.0,
+      "created": "2026-10-20T20:27:42",
+      "deck": {
+        "character": "",
+        "copies": 1.0,
+        "enabled": false
+      },
+      "effects": [
+        {
+          "amount": 0.0,
+          "amount_is_var": true,
+          "amount_var": "Gigan",
+          "card_entry": "",
+          "condition": {
+            "left": "",
+            "mode": "none",
+            "note": "",
+            "op": ">=",
+            "right": ""
+          },
+          "enabled": true,
+          "hits": 1.0,
+          "id": "279433109_85179",
+          "keyword": "Exhaust",
+          "kind": "apply_power",
+          "loop": {
+            "count": 1.0,
+            "mode": "count",
+            "var": ""
+          },
+          "note": "",
+          "pile": "Draw",
+          "position": "Bottom",
+          "power": "GigantificationPower",
+          "target": "self",
+          "value_prop": ""
+        }
+      ],
+      "entry": "NEW_CARD5",
+      "flags": {
+        "gains_block": false,
+        "show_in_card_library": true
+      },
+      "has_x_cost": false,
+      "id": "NewCard5",
+      "keywords": [
+        "Exhaust"
+      ],
+      "kind": "card",
+      "max_upgrade_level": 1.0,
+      "modified": "2026-10-20T20:47:16",
+      "notes": "",
+      "pool": "wwwcard",
+      "rarity": "Uncommon",
+      "star_cost": -1.0,
+      "tags": [],
+      "target": "Self",
+      "text": {
+        "eng": {
+          "description": "",
+          "title": "NewCard5"
+        },
+        "zhs": {
+          "description": "给予{Gigan:diff()}层超巨化",
+          "title": "听雨的声音"
+        }
+      },
+      "type": "Skill",
+      "upgrade": {
+        "cost_delta": 0.0,
+        "keywords_add": [],
+        "keywords_remove": [
+          "Exhaust"
+        ],
+        "text_override": {
+          "eng": {
+            "description": "",
+            "title": ""
+          },
+          "zhs": {
+            "description": "",
+            "title": ""
+          }
+        },
+        "var_deltas": []
+      },
+      "vars": [
+        {
+          "base": 2.0,
+          "generic": "GigantificationPower",
+          "kind": "Power",
+          "name": "Gigan",
+          "type": "PowerVar",
+          "upgrade_delta": 0.0,
+          "value_prop": ""
+        }
+      ]
+    },
+    {
+      "art": {
+        "atlas": "images/atlases/card_atlas.sprites/wwwcard/new_card6.tres",
+        "portrait": "images/packed/card_portraits/wwwcard/new_card6.png",
+        "use_auto": true
+      },
+      "cost": 1.0,
+      "created": "2026-10-20T20:41:08",
+      "deck": {
+        "character": "",
+        "copies": 1.0,
+        "enabled": false
+      },
+      "effects": [
+        {
+          "amount": 0.0,
+          "amount_is_var": true,
+          "amount_var": "Damage",
+          "card_entry": "",
+          "condition": {
+            "left": "",
+            "mode": "none",
+            "note": "",
+            "op": ">=",
+            "right": ""
+          },
+          "enabled": true,
+          "hits": 5.0,
+          "id": "85945816_35677",
+          "keyword": "Exhaust",
+          "kind": "damage",
+          "loop": {
+            "count": 1.0,
+            "mode": "none",
+            "var": ""
+          },
+          "note": "",
+          "pile": "Draw",
+          "position": "Bottom",
+          "power": "",
+          "target": "random_enemy",
+          "value_prop": ""
+        }
+      ],
+      "entry": "NEW_CARD6",
+      "flags": {
+        "gains_block": false,
+        "show_in_card_library": true
+      },
+      "has_x_cost": false,
+      "id": "NewCard6",
+      "keywords": [],
+      "kind": "card",
+      "max_upgrade_level": 1.0,
+      "modified": "2026-10-20T20:47:16",
+      "notes": "",
+      "pool": "wwwcard",
+      "rarity": "Common",
+      "star_cost": -1.0,
+      "tags": [],
+      "target": "AnyEnemy",
+      "text": {
+        "eng": {
+          "description": "",
+          "title": "NewCard6"
+        },
+        "zhs": {
+          "description": "随机对敌人造成{Damage:diff()}点伤害5次",
+          "title": "利刃华尔兹"
+        }
+      },
+      "type": "Attack",
+      "upgrade": {
+        "cost_delta": 0.0,
+        "keywords_add": [],
+        "keywords_remove": [],
+        "text_override": {
+          "eng": {
+            "description": "",
+            "title": ""
+          },
+          "zhs": {
+            "description": "",
+            "title": ""
+          }
+        },
+        "var_deltas": []
+      },
+      "vars": [
+        {
+          "base": 2.0,
+          "generic": "",
+          "kind": "Damage",
+          "name": "Damage",
+          "type": "DamageVar",
+          "upgrade_delta": 1.0,
+          "value_prop": ""
+        }
+      ]
+    }
+  ],
+  "custom_characters": [
+    {
+      "ancient_dialogues": {
+        "DARV": {
+          "first": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "旅人，看看这里有没有你需要的东西。",
+              "text_eng": "Traveler, see if there is something here you need."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我已准备好。",
+              "text_eng": "I am ready."
+            }
+          ],
+          "repeat": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "我们又见面了，旅人。",
+              "text_eng": "We meet again, traveler."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我的旅途还在继续。",
+              "text_eng": "My journey continues."
+            }
+          ]
+        },
+        "NEOW": {
+          "first": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "新的旅人，你准备好踏上这段旅途了吗？",
+              "text_eng": "New traveler, are you ready for the journey?"
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我已准备好。",
+              "text_eng": "I am ready."
+            }
+          ],
+          "repeat": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "我们又见面了，旅人。",
+              "text_eng": "We meet again, traveler."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我的旅途还在继续。",
+              "text_eng": "My journey continues."
+            }
+          ]
+        },
+        "NONUPEIPE": {
+          "first": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "一路走来，你一定经历了不少事情。",
+              "text_eng": "You must have seen much on your way here."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我已准备好。",
+              "text_eng": "I am ready."
+            }
+          ],
+          "repeat": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "我们又见面了，旅人。",
+              "text_eng": "We meet again, traveler."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我的旅途还在继续。",
+              "text_eng": "My journey continues."
+            }
+          ]
+        },
+        "OROBAS": {
+          "first": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "旅人，你愿意如何改变自己的命运？",
+              "text_eng": "Traveler, how would you change your fate?"
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我已准备好。",
+              "text_eng": "I am ready."
+            }
+          ],
+          "repeat": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "我们又见面了，旅人。",
+              "text_eng": "We meet again, traveler."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我的旅途还在继续。",
+              "text_eng": "My journey continues."
+            }
+          ]
+        },
+        "PAEL": {
+          "first": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "你来到这里，是为了寻找什么？",
+              "text_eng": "What have you come here to find?"
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我已准备好。",
+              "text_eng": "I am ready."
+            }
+          ],
+          "repeat": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "我们又见面了，旅人。",
+              "text_eng": "We meet again, traveler."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我的旅途还在继续。",
+              "text_eng": "My journey continues."
+            }
+          ]
+        },
+        "TANX": {
+          "first": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "旅人，前方还有考验在等待着你。",
+              "text_eng": "Traveler, more trials await you ahead."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我已准备好。",
+              "text_eng": "I am ready."
+            }
+          ],
+          "repeat": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "我们又见面了，旅人。",
+              "text_eng": "We meet again, traveler."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我的旅途还在继续。",
+              "text_eng": "My journey continues."
+            }
+          ]
+        },
+        "TEZCATARA": {
+          "first": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "走近些，让我看看这位新的挑战者。",
+              "text_eng": "Come closer. Let me see this new challenger."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我已准备好。",
+              "text_eng": "I am ready."
+            }
+          ],
+          "repeat": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "我们又见面了，旅人。",
+              "text_eng": "We meet again, traveler."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我的旅途还在继续。",
+              "text_eng": "My journey continues."
+            }
+          ]
+        },
+        "THE_ARCHITECT": {
+          "first": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "你终于抵达了这里。",
+              "text_eng": "At last, you have arrived."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我已准备好。",
+              "text_eng": "I am ready."
+            }
+          ],
+          "repeat": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "我们又见面了，旅人。",
+              "text_eng": "We meet again, traveler."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我的旅途还在继续。",
+              "text_eng": "My journey continues."
+            }
+          ]
+        },
+        "VAKUU": {
+          "first": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "你已经走了很远。你还会继续吗？",
+              "text_eng": "You have come far. Will you continue?"
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我已准备好。",
+              "text_eng": "I am ready."
+            }
+          ],
+          "repeat": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "我们又见面了，旅人。",
+              "text_eng": "We meet again, traveler."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我的旅途还在继续。",
+              "text_eng": "My journey continues."
+            }
+          ]
+        }
+      },
+      "card_pool": "wwwcard",
+      "created": "2026-10-19T20:17:52",
+      "description": "只有初始卡组的强力角色",
+      "description_eng": "A custom character.",
+      "id": "www",
+      "include_base_cards": false,
+      "include_base_relics": false,
+      "independent": true,
+      "max_energy": 4.0,
+      "name": "呜呜呜",
+      "name_eng": "www",
+      "relic_pool": "wwwpool",
+      "starting_deck": [
+        {
+          "copies": 2.0,
+          "id": "wudi",
+          "source": "mod"
+        },
+        {
+          "copies": 5.0,
+          "id": "NewCard1",
+          "source": "mod"
+        },
+        {
+          "copies": 5.0,
+          "id": "NewCard2",
+          "source": "mod"
+        }
+      ],
+      "starting_gold": 250.0,
+      "starting_hp": 60.0,
+      "template": "Independent",
+      "use_base_deck": false,
+      "use_base_relics": false,
+      "visuals": {
+        "animated": true,
+        "asset_root": "res://designs/character_assets/1d97244350e0ac2f2b0af028dcf2e45cc905deca5a10dbf21f4e45db2d14cc17",
+        "attack": "attack",
+        "attack_delay": 0.15,
+        "battle_scene": "battle.tscn",
+        "cast": "cast",
+        "cast_delay": 0.15,
+        "dead": "dead",
+        "hit": "hit",
+        "icon": "icon.svg",
+        "idle": "idle",
+        "merchant_scene": "world.tscn",
+        "mode": "custom",
+        "rest_scene": "world.tscn",
+        "select_background": "background.svg",
+        "select_icon": "select.svg"
+      }
+    }
+  ],
+  "format": "card_relic_forge/designs",
+  "format_version": 2,
+  "min_game_version": "",
+  "mod_author": "竹尘归夙愿",
+  "mod_description": "",
+  "mod_id": "interesting",
+  "mod_name": "趣味小mod",
+  "mod_version": "1.0.2",
+  "relics": [
+    {
+      "art": {
+        "atlas": "images/atlases/relic_atlas.sprites/new_relic.tres",
+        "icon": "images/relics/new_relic.png",
+        "use_auto": true
+      },
+      "counter_period": 1.0,
+      "created": "2026-10-15T22:49:10",
+      "deck": {
+        "character": "www",
+        "enabled": true
+      },
+      "entry": "NEW_RELIC",
+      "id": "NewRelic",
+      "kind": "relic",
+      "modified": "2026-10-19T20:42:15",
+      "notes": "",
+      "pool": "wwwpool",
+      "rarity": "Starter",
+      "show_counter": false,
+      "stackable": false,
+      "text": {
+        "eng": {
+          "description": "",
+          "flavor": "",
+          "title": "NewRelic"
+        },
+        "zhs": {
+          "description": "回复1点能量",
+          "flavor": "",
+          "title": "NewRelic"
+        }
+      },
+      "triggers": [
+        {
+          "charge": {
+            "mode": "always",
+            "n": 1.0
+          },
+          "condition": {
+            "left": "",
+            "mode": "none",
+            "note": "",
+            "op": ">=",
+            "right": ""
+          },
+          "effects": [
+            {
+              "amount": 0.0,
+              "amount_is_var": true,
+              "amount_var": "Value1",
+              "card_entry": "",
+              "condition": {
+                "left": "",
+                "mode": "none",
+                "note": "",
+                "op": ">=",
+                "right": ""
+              },
+              "enabled": true,
+              "hits": 1.0,
+              "id": "119969902_39065",
+              "keyword": "Exhaust",
+              "kind": "energy",
+              "loop": {
+                "count": 1.0,
+                "mode": "count",
+                "var": ""
+              },
+              "note": "",
+              "pile": "Draw",
+              "position": "Bottom",
+              "power": "",
+              "target": "self",
+              "value_prop": ""
+            }
+          ],
+          "hook": "AfterPlayerTurnStart",
+          "loop": {
+            "count": 1.0,
+            "mode": "none",
+            "var": ""
+          },
+          "note": "",
+          "params": {
+            "choiceContext": "_choice",
+            "player": "_player"
+          }
+        }
+      ],
+      "vars": [
+        {
+          "base": 1.0,
+          "generic": "",
+          "kind": "Energy",
+          "name": "Value1",
+          "type": "EnergyVar",
+          "upgrade_delta": 0.0,
+          "value_prop": ""
+        }
+      ]
+    }
+  ],
+  "saved_at": "2026-10-22T19:54:51"
+}

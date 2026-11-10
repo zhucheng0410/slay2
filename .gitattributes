@@ -1,0 +1,103 @@
+# =============================================================================
+# CardRelicForge — .gitattributes
+#
+# 作用有三：
+#   1. 统一换行符：仓库内文本一律 LF，只让 Windows 脚本在检出时保持 CRLF，
+#      避免「改一行、整个文件变红」的换行符噪音；
+#   2. 声明二进制类型：禁止 Git 对 .pck / .dll / 图片做换行转换（会损坏文件）
+#      和文本合并；
+#   3. 让 GitHub 的 diff 视图、语言统计、源码 ZIP 更准确。
+#
+# 本文件改完、且仓库里已有内容时，执行一次让历史文件按新规则重写：
+#   git add --renormalize .
+#   git commit -m "chore: normalize line endings"
+# 检查结果（应只有 run.cmd / run.ps1 / *.cmd 显示 crlf）：
+#   git ls-files --eol | Select-String "crlf"
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 1. 默认策略
+#    文本文件自动识别，仓库内统一 LF；检出时按平台转换。
+#    显式列出本工程实际用到的类型，避免 git 猜错（也方便 GitHub 高亮）。
+# -----------------------------------------------------------------------------
+* text=auto eol=lf
+
+*.gd       text
+*.cs       text diff=csharp
+*.csproj   text
+*.sln      text eol=crlf
+*.json     text
+*.md       text
+*.txt      text
+*.cfg      text
+*.godot    text
+*.tscn     text
+*.tres     text
+*.import   text
+*.uid      text
+*.svg      text
+*.manifest text
+
+# 注意：*.import 与 *.uid 由 Godot 生成，但属于必须入库的文本元数据
+# （.gitignore 里也没有忽略它们），这里只声明为文本，不做任何过滤。
+
+# -----------------------------------------------------------------------------
+# 2. Windows 脚本：强制 CRLF
+#    cmd.exe 对「只有 LF」的批处理并不可靠（:label / goto、括号块、
+#    for /f 尤其容易出错）；PowerShell 5.1 也建议 CRLF。
+#    保持 CRLF 才能让从 GitHub 下载解压后直接双击运行。
+# -----------------------------------------------------------------------------
+*.cmd      text eol=crlf
+*.bat      text eol=crlf
+*.ps1      text eol=crlf
+*.psm1     text eol=crlf
+
+# -----------------------------------------------------------------------------
+# 3. 二进制：禁止换行转换、禁止文本 diff / merge
+#    （即使将来把 exports/ 的示例放进仓库，这些也不会被 Git 改坏）
+# -----------------------------------------------------------------------------
+# 导出与构建产物
+*.pck         binary
+*.dll         binary
+*.exe         binary
+*.pdb         binary
+*.mdb         binary
+*.nupkg       binary
+*.snupkg      binary
+*.zip         binary
+*.7z          binary
+*.rar         binary
+# Godot 序列化资源 / 纹理 / 缓存
+*.res         binary
+*.ctex        binary
+*.scn         binary
+*.bin         binary
+*.cache       binary
+# 日志（通常已被 .gitignore 排除，此处只防误加 -f 后损坏）
+*.log         binary
+# 密钥与证书
+*.keystore    binary
+*.jks         binary
+*.pfx         binary
+*.p12         binary
+*.snk         binary
+# 图片 / 音频 / 字体
+*.png         binary
+*.jpg         binary
+*.jpeg        binary
+*.webp        binary
+*.gif         binary
+*.ico         binary
+*.ogg         binary
+*.wav         binary
+*.mp3         binary
+*.ttf         binary
+*.otf         binary
+
+# -----------------------------------------------------------------------------
+# 4. 发布打包
+#    GitHub 的「Download ZIP」/ git archive 会按 export-ignore 剔除这些文件，
+#    让下载包的根目录更干净。
+# -----------------------------------------------------------------------------
+/.gitignore     export-ignore
+/.gitattributes export-ignore

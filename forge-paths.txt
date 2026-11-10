@@ -1,0 +1,16 @@
+# CardRelicForge - path side-car (OPTIONAL).
+#
+# The launcher auto-detects the engine folder sitting next to CardRelicForge, so
+# you normally do not need this file at all. Only add a line here if your engine
+# lives somewhere else.
+#
+# Keep every path in this file ASCII-only: it is read by run.cmd, and batch-file
+# reading is not reliable for UTF-8 / non-ASCII characters.
+#
+# To fix "Godot executable was not found", remove the # and replace the path:
+#   godot=C:\Godot\Godot_v4.5.1-stable_mono_win64.exe
+# Use the full Godot 4.5.1 MONO executable, not the regular or _console.exe build.
+#   userdir=<optional, defaults to .forge_userdata next to this file>
+#
+# Use the full engine binary (about 160 MB), NOT the *_console.exe stub next to
+# it (only about 200 KB, just a re-launcher). The launcher auto-corrects this.

@@ -1,0 +1,887 @@
+{
+  "abilities": [
+    {
+      "created": "2026-10-19T21:28:06",
+      "effects": [
+        {
+          "amount": 0.0,
+          "amount_is_var": true,
+          "amount_var": "Block",
+          "card_entry": "",
+          "condition": {
+            "left": "",
+            "mode": "none",
+            "note": "",
+            "op": ">=",
+            "right": ""
+          },
+          "enabled": true,
+          "hits": 1.0,
+          "id": "1677117_50380",
+          "keyword": "Exhaust",
+          "kind": "block",
+          "loop": {
+            "count": 1.0,
+            "mode": "none",
+            "var": ""
+          },
+          "note": "",
+          "pile": "Draw",
+          "position": "Bottom",
+          "power": "",
+          "target": "self",
+          "value_prop": ""
+        },
+        {
+          "amount": 0.0,
+          "amount_is_var": true,
+          "amount_var": "Draw",
+          "card_entry": "",
+          "condition": {
+            "left": "",
+            "mode": "none",
+            "note": "",
+            "op": ">=",
+            "right": ""
+          },
+          "enabled": true,
+          "hits": 1.0,
+          "id": "1677138_6962",
+          "keyword": "Exhaust",
+          "kind": "draw",
+          "loop": {
+            "count": 1.0,
+            "mode": "none",
+            "var": ""
+          },
+          "note": "",
+          "pile": "Draw",
+          "position": "Bottom",
+          "power": "",
+          "target": "self",
+          "value_prop": ""
+        }
+      ],
+      "id": "DrawAndGuard",
+      "title": "抽牌与格挡",
+      "vars": [
+        {
+          "base": 5.0,
+          "generic": "",
+          "kind": "Block",
+          "name": "Block",
+          "type": "BlockVar",
+          "upgrade_delta": 0.0,
+          "value_prop": "Move"
+        },
+        {
+          "base": 2.0,
+          "generic": "",
+          "kind": "Cards",
+          "name": "Draw",
+          "type": "CardsVar",
+          "upgrade_delta": 0.0,
+          "value_prop": ""
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "art": {
+        "atlas": "images/atlases/card_atlas.sprites/forge_wanderer/forge_strike.tres",
+        "portrait": "images/packed/card_portraits/forge_wanderer/forge_strike.png",
+        "use_auto": true
+      },
+      "cost": 1.0,
+      "created": "2026-10-19T21:28:06",
+      "deck": {
+        "character": "ForgeWanderer",
+        "copies": 5.0,
+        "enabled": true
+      },
+      "effects": [
+        {
+          "amount": 0.0,
+          "amount_is_var": true,
+          "amount_var": "Damage",
+          "card_entry": "",
+          "condition": {
+            "left": "",
+            "mode": "none",
+            "note": "",
+            "op": ">=",
+            "right": ""
+          },
+          "enabled": true,
+          "hits": 1.0,
+          "id": "1677071_13778",
+          "keyword": "Exhaust",
+          "kind": "damage",
+          "loop": {
+            "count": 1.0,
+            "mode": "none",
+            "var": ""
+          },
+          "note": "",
+          "pile": "Draw",
+          "position": "Bottom",
+          "power": "",
+          "target": "card_target",
+          "value_prop": ""
+        }
+      ],
+      "entry": "FORGE_STRIKE",
+      "flags": {
+        "gains_block": false,
+        "show_in_card_library": true
+      },
+      "has_x_cost": false,
+      "id": "ForgeStrike",
+      "keywords": [],
+      "kind": "card",
+      "max_upgrade_level": 1.0,
+      "modified": "2026-10-19T21:28:06",
+      "notes": "",
+      "pool": "ForgeWandererCardPool",
+      "rarity": "Basic",
+      "star_cost": -1.0,
+      "tags": [],
+      "target": "AnyEnemy",
+      "text": {
+        "eng": {
+          "description": "Deal {Damage:diff()} damage.",
+          "title": "Forged Strike"
+        },
+        "zhs": {
+          "description": "造成 {Damage:diff()} 点伤害。",
+          "title": "锻击"
+        }
+      },
+      "type": "Attack",
+      "upgrade": {
+        "cost_delta": 0.0,
+        "keywords_add": [],
+        "keywords_remove": [],
+        "text_override": {
+          "eng": {
+            "description": "",
+            "title": ""
+          },
+          "zhs": {
+            "description": "",
+            "title": ""
+          }
+        },
+        "var_deltas": []
+      },
+      "vars": [
+        {
+          "base": 6.0,
+          "generic": "",
+          "kind": "Damage",
+          "name": "Damage",
+          "type": "DamageVar",
+          "upgrade_delta": 0.0,
+          "value_prop": "Move"
+        }
+      ]
+    },
+    {
+      "art": {
+        "atlas": "images/atlases/card_atlas.sprites/forge_wanderer/forge_guard.tres",
+        "portrait": "images/packed/card_portraits/forge_wanderer/forge_guard.png",
+        "use_auto": true
+      },
+      "cost": 1.0,
+      "created": "2026-10-19T21:28:06",
+      "deck": {
+        "character": "ForgeWanderer",
+        "copies": 4.0,
+        "enabled": true
+      },
+      "effects": [
+        {
+          "amount": 0.0,
+          "amount_is_var": true,
+          "amount_var": "Block",
+          "card_entry": "",
+          "condition": {
+            "left": "",
+            "mode": "none",
+            "note": "",
+            "op": ">=",
+            "right": ""
+          },
+          "enabled": true,
+          "hits": 1.0,
+          "id": "1677117_50380",
+          "keyword": "Exhaust",
+          "kind": "block",
+          "loop": {
+            "count": 1.0,
+            "mode": "none",
+            "var": ""
+          },
+          "note": "",
+          "pile": "Draw",
+          "position": "Bottom",
+          "power": "",
+          "target": "self",
+          "value_prop": ""
+        }
+      ],
+      "entry": "FORGE_GUARD",
+      "flags": {
+        "gains_block": true,
+        "show_in_card_library": true
+      },
+      "has_x_cost": false,
+      "id": "ForgeGuard",
+      "keywords": [],
+      "kind": "card",
+      "max_upgrade_level": 1.0,
+      "modified": "2026-10-19T21:28:06",
+      "notes": "",
+      "pool": "ForgeWandererCardPool",
+      "rarity": "Basic",
+      "star_cost": -1.0,
+      "tags": [],
+      "target": "Self",
+      "text": {
+        "eng": {
+          "description": "Gain {Block:diff()} Block.",
+          "title": "Forged Guard"
+        },
+        "zhs": {
+          "description": "获得 {Block:diff()} 点格挡。",
+          "title": "护身"
+        }
+      },
+      "type": "Skill",
+      "upgrade": {
+        "cost_delta": 0.0,
+        "keywords_add": [],
+        "keywords_remove": [],
+        "text_override": {
+          "eng": {
+            "description": "",
+            "title": ""
+          },
+          "zhs": {
+            "description": "",
+            "title": ""
+          }
+        },
+        "var_deltas": []
+      },
+      "vars": [
+        {
+          "base": 5.0,
+          "generic": "",
+          "kind": "Block",
+          "name": "Block",
+          "type": "BlockVar",
+          "upgrade_delta": 0.0,
+          "value_prop": "Move"
+        }
+      ]
+    },
+    {
+      "art": {
+        "atlas": "images/atlases/card_atlas.sprites/forge_wanderer/forge_insight.tres",
+        "portrait": "images/packed/card_portraits/forge_wanderer/forge_insight.png",
+        "use_auto": true
+      },
+      "cost": 1.0,
+      "created": "2026-10-19T21:28:06",
+      "deck": {
+        "character": "ForgeWanderer",
+        "copies": 1.0,
+        "enabled": true
+      },
+      "effects": [
+        {
+          "amount": 0.0,
+          "amount_is_var": true,
+          "amount_var": "Block",
+          "card_entry": "",
+          "condition": {
+            "left": "",
+            "mode": "none",
+            "note": "",
+            "op": ">=",
+            "right": ""
+          },
+          "enabled": true,
+          "hits": 1.0,
+          "id": "1677117_50380",
+          "keyword": "Exhaust",
+          "kind": "block",
+          "loop": {
+            "count": 1.0,
+            "mode": "none",
+            "var": ""
+          },
+          "note": "",
+          "pile": "Draw",
+          "position": "Bottom",
+          "power": "",
+          "target": "self",
+          "value_prop": ""
+        },
+        {
+          "amount": 0.0,
+          "amount_is_var": true,
+          "amount_var": "Draw",
+          "card_entry": "",
+          "condition": {
+            "left": "",
+            "mode": "none",
+            "note": "",
+            "op": ">=",
+            "right": ""
+          },
+          "enabled": true,
+          "hits": 1.0,
+          "id": "1677138_6962",
+          "keyword": "Exhaust",
+          "kind": "draw",
+          "loop": {
+            "count": 1.0,
+            "mode": "none",
+            "var": ""
+          },
+          "note": "",
+          "pile": "Draw",
+          "position": "Bottom",
+          "power": "",
+          "target": "self",
+          "value_prop": ""
+        }
+      ],
+      "entry": "FORGE_INSIGHT",
+      "flags": {
+        "gains_block": true,
+        "show_in_card_library": true
+      },
+      "has_x_cost": false,
+      "id": "ForgeInsight",
+      "keywords": [],
+      "kind": "card",
+      "max_upgrade_level": 1.0,
+      "modified": "2026-10-19T21:28:06",
+      "notes": "",
+      "pool": "ForgeWandererCardPool",
+      "rarity": "Common",
+      "star_cost": -1.0,
+      "tags": [],
+      "target": "Self",
+      "text": {
+        "eng": {
+          "description": "Gain {Block:diff()} Block. Draw {Draw} cards.",
+          "title": "Composed Insight"
+        },
+        "zhs": {
+          "description": "获得 {Block:diff()} 点格挡。抽 {Draw} 张牌。",
+          "title": "沉着思考"
+        }
+      },
+      "type": "Skill",
+      "upgrade": {
+        "cost_delta": 0.0,
+        "keywords_add": [],
+        "keywords_remove": [],
+        "text_override": {
+          "eng": {
+            "description": "",
+            "title": ""
+          },
+          "zhs": {
+            "description": "",
+            "title": ""
+          }
+        },
+        "var_deltas": []
+      },
+      "vars": [
+        {
+          "base": 5.0,
+          "generic": "",
+          "kind": "Block",
+          "name": "Block",
+          "type": "BlockVar",
+          "upgrade_delta": 0.0,
+          "value_prop": "Move"
+        },
+        {
+          "base": 2.0,
+          "generic": "",
+          "kind": "Cards",
+          "name": "Draw",
+          "type": "CardsVar",
+          "upgrade_delta": 0.0,
+          "value_prop": ""
+        }
+      ]
+    }
+  ],
+  "custom_characters": [
+    {
+      "ancient_dialogues": {
+        "DARV": {
+          "first": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "旅人，看看这里有没有你需要的东西。",
+              "text_eng": "Traveler, see if there is something here you need."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我已准备好。",
+              "text_eng": "I am ready."
+            }
+          ],
+          "repeat": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "我们又见面了，旅人。",
+              "text_eng": "We meet again, traveler."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我的旅途还在继续。",
+              "text_eng": "My journey continues."
+            }
+          ]
+        },
+        "NEOW": {
+          "first": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "新的旅人，你准备好踏上这段旅途了吗？",
+              "text_eng": "New traveler, are you ready for the journey?"
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我已准备好。",
+              "text_eng": "I am ready."
+            }
+          ],
+          "repeat": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "我们又见面了，旅人。",
+              "text_eng": "We meet again, traveler."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我的旅途还在继续。",
+              "text_eng": "My journey continues."
+            }
+          ]
+        },
+        "NONUPEIPE": {
+          "first": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "一路走来，你一定经历了不少事情。",
+              "text_eng": "You must have seen much on your way here."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我已准备好。",
+              "text_eng": "I am ready."
+            }
+          ],
+          "repeat": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "我们又见面了，旅人。",
+              "text_eng": "We meet again, traveler."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我的旅途还在继续。",
+              "text_eng": "My journey continues."
+            }
+          ]
+        },
+        "OROBAS": {
+          "first": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "旅人，你愿意如何改变自己的命运？",
+              "text_eng": "Traveler, how would you change your fate?"
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我已准备好。",
+              "text_eng": "I am ready."
+            }
+          ],
+          "repeat": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "我们又见面了，旅人。",
+              "text_eng": "We meet again, traveler."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我的旅途还在继续。",
+              "text_eng": "My journey continues."
+            }
+          ]
+        },
+        "PAEL": {
+          "first": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "你来到这里，是为了寻找什么？",
+              "text_eng": "What have you come here to find?"
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我已准备好。",
+              "text_eng": "I am ready."
+            }
+          ],
+          "repeat": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "我们又见面了，旅人。",
+              "text_eng": "We meet again, traveler."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我的旅途还在继续。",
+              "text_eng": "My journey continues."
+            }
+          ]
+        },
+        "TANX": {
+          "first": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "旅人，前方还有考验在等待着你。",
+              "text_eng": "Traveler, more trials await you ahead."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我已准备好。",
+              "text_eng": "I am ready."
+            }
+          ],
+          "repeat": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "我们又见面了，旅人。",
+              "text_eng": "We meet again, traveler."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我的旅途还在继续。",
+              "text_eng": "My journey continues."
+            }
+          ]
+        },
+        "TEZCATARA": {
+          "first": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "走近些，让我看看这位新的挑战者。",
+              "text_eng": "Come closer. Let me see this new challenger."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我已准备好。",
+              "text_eng": "I am ready."
+            }
+          ],
+          "repeat": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "我们又见面了，旅人。",
+              "text_eng": "We meet again, traveler."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我的旅途还在继续。",
+              "text_eng": "My journey continues."
+            }
+          ]
+        },
+        "THE_ARCHITECT": {
+          "first": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "你终于抵达了这里。",
+              "text_eng": "At last, you have arrived."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我已准备好。",
+              "text_eng": "I am ready."
+            }
+          ],
+          "repeat": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "我们又见面了，旅人。",
+              "text_eng": "We meet again, traveler."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我的旅途还在继续。",
+              "text_eng": "My journey continues."
+            }
+          ]
+        },
+        "VAKUU": {
+          "first": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "你已经走了很远。你还会继续吗？",
+              "text_eng": "You have come far. Will you continue?"
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我已准备好。",
+              "text_eng": "I am ready."
+            }
+          ],
+          "repeat": [
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "ancient",
+              "text": "我们又见面了，旅人。",
+              "text_eng": "We meet again, traveler."
+            },
+            {
+              "next": "",
+              "next_eng": "",
+              "speaker": "char",
+              "text": "我的旅途还在继续。",
+              "text_eng": "My journey continues."
+            }
+          ]
+        }
+      },
+      "card_pool": "ForgeWandererCardPool",
+      "description": "被点亮的炉心，驱动着木制躯壳。\n以抽牌和格挡的组合，探索自己的旅途。",
+      "description_eng": "A wooden body awakened by a forge heart.\nDraw and defend to find your own path.",
+      "id": "ForgeWanderer",
+      "include_base_cards": false,
+      "include_base_relics": false,
+      "independent": true,
+      "max_energy": 3.0,
+      "name": "锻造木偶",
+      "name_eng": "The Forge Puppet",
+      "relic_pool": "ForgeWandererRelicPool",
+      "starting_gold": 99.0,
+      "starting_hp": 72.0,
+      "template": "Independent",
+      "use_base_deck": false,
+      "use_base_relics": false,
+      "visuals": {
+        "animated": true,
+        "asset_root": "res://designs/character_assets/0ac7767506dd941893d00409e7107d018bdc205ca2157234f140245aa917c687",
+        "attack": "attack",
+        "attack_delay": 0.15,
+        "battle_scene": "battle.tscn",
+        "cast": "cast",
+        "cast_delay": 0.15,
+        "dead": "dead",
+        "hit": "hit",
+        "icon": "icon.svg",
+        "idle": "idle",
+        "merchant_scene": "world.tscn",
+        "mode": "custom",
+        "rest_scene": "world.tscn",
+        "select_background": "background.svg",
+        "select_icon": "select.svg"
+      }
+    }
+  ],
+  "format": "card_relic_forge/designs",
+  "format_version": 2.0,
+  "min_game_version": "",
+  "mod_author": "",
+  "mod_description": "独立可选角色、自制战斗模型和动画、选角图、卡牌池与遗物池。",
+  "mod_id": "ForgeCustomModelExample",
+  "mod_name": "锻造木偶 · 自定义模型示例",
+  "mod_version": "1.0.3",
+  "relics": [
+    {
+      "art": {
+        "atlas": "images/atlases/relic_atlas.sprites/forge_keepsake.tres",
+        "icon": "images/relics/forge_keepsake.png",
+        "use_auto": true
+      },
+      "counter_period": 3.0,
+      "created": "2026-10-19T21:28:06",
+      "deck": {
+        "character": "ForgeWanderer",
+        "enabled": true
+      },
+      "entry": "FORGE_KEEPSAKE",
+      "id": "ForgeKeepsake",
+      "kind": "relic",
+      "modified": "2026-10-19T21:28:06",
+      "notes": "",
+      "pool": "ForgeWandererRelicPool",
+      "rarity": "Starter",
+      "show_counter": false,
+      "stackable": false,
+      "text": {
+        "eng": {
+          "description": "At the start of combat, gain {Block} Block.",
+          "flavor": "",
+          "title": "Wanderer's Keepsake"
+        },
+        "zhs": {
+          "description": "战斗开始时，获得 {Block} 点格挡。",
+          "flavor": "",
+          "title": "旅者护符"
+        }
+      },
+      "triggers": [
+        {
+          "charge": {
+            "mode": "always",
+            "n": 1.0
+          },
+          "condition": {
+            "left": "",
+            "mode": "none",
+            "note": "",
+            "op": ">=",
+            "right": ""
+          },
+          "effects": [
+            {
+              "amount": 0.0,
+              "amount_is_var": true,
+              "amount_var": "Block",
+              "card_entry": "",
+              "condition": {
+                "left": "",
+                "mode": "none",
+                "note": "",
+                "op": ">=",
+                "right": ""
+              },
+              "enabled": true,
+              "hits": 1.0,
+              "id": "1676730_13188",
+              "keyword": "Exhaust",
+              "kind": "block",
+              "loop": {
+                "count": 1.0,
+                "mode": "none",
+                "var": ""
+              },
+              "note": "",
+              "pile": "Draw",
+              "position": "Bottom",
+              "power": "",
+              "target": "self",
+              "value_prop": ""
+            }
+          ],
+          "hook": "BeforeCombatStart",
+          "loop": {
+            "count": 1.0,
+            "mode": "none",
+            "var": ""
+          },
+          "note": "",
+          "params": {
+
+          }
+        }
+      ],
+      "vars": [
+        {
+          "base": 3.0,
+          "generic": "",
+          "kind": "Block",
+          "name": "Block",
+          "type": "BlockVar",
+          "upgrade_delta": 0.0,
+          "value_prop": "Unpowered"
+        }
+      ]
+    }
+  ],
+  "saved_at": "2026-10-20T19:15:25"
+}

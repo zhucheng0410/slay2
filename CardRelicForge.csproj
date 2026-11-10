@@ -1,0 +1,31 @@
+<Project Sdk="Godot.NET.Sdk/4.5.1">
+  <!--
+    CardRelicForge is a pure-GDScript tool. This project file exists only so the
+    *mono* Godot build finds a project assembly to load. Without it the engine
+    prints ".NET: Failed to load project assembly" on every launch (harmless, but
+    alarming). Nothing in the tool depends on C# or on this assembly.
+  -->
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <RootNamespace>CardRelicForge</RootNamespace>
+    <Nullable>disable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <!-- Keep the build completely silent; we only need the assembly to exist. -->
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+
+  <!--
+    Never compile anything on disk: the tool generates complete C# mod projects
+    under exports/, and those target the game's sts2.dll, not this project. If the
+    SDK globbed them, the engine assembly build would fail with CS0246.
+  -->
+  <ItemGroup>
+    <Compile Remove="**/*.cs" />
+    <Compile Remove="exports/**" />
+    <Compile Remove="tools/**" />
+    <None Remove="exports/**" />
+    <None Remove="designs/**" />
+  </ItemGroup>
+</Project>

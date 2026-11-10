@@ -1,0 +1,150 @@
+# =============================================================================
+# CardRelicForge — .gitignore
+#
+# 项目形态：Godot 4.5 (.NET / Mono) 的「运行时工程」+ 由它生成并编译的 C# Mod 工程。
+# 入库原则：只保留 源码 / 文档 / 设计数据(JSON) / 可复用资源模板；
+#           引擎缓存、本机绝对路径、构建产物、日志、密钥一律不入库。
+#
+# 语法提示：
+#   / 开头      → 只匹配仓库根目录
+#   不含 /      → 匹配任意层级（含 exports/、tools/ 下的嵌套工程）
+#   ! 开头      → 重新包含；但父目录已被忽略时无效，须先取消父目录的忽略
+# 被忽略但确实要提交的文件：git add -f <路径>
+# 查看某文件为何被忽略：git check-ignore -v <路径>
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 1. Godot 引擎缓存与导入产物
+#    全部由引擎自动重建；提交它们只会制造无意义的二进制冲突。
+# -----------------------------------------------------------------------------
+.godot/
+# 引擎 / 编辑器崩溃转储
+mono_crash.*.json
+# Godot 导出的二进制翻译表
+*.translation
+# 导出预设里可能写着 Android 签名口令；要共享导出配置时删掉这一行
+export_presets.cfg
+
+# ⚠ 以下三类是「必须提交」的，故意不忽略，也不要手动加规则：
+#   *.import    —— 例：icon.svg.import，记录导入参数与 .godot/imported 下的目标
+#   *.uid       —— Godot 4.4+ 的脚本/场景 UID，删掉会导致引用错乱
+#   .gdignore   —— 例：designs/character_assets/*/.gdignore，告知 Godot 跳过该目录
+
+# -----------------------------------------------------------------------------
+# 2. 本工具的运行期数据
+# -----------------------------------------------------------------------------
+# run.cmd / run.ps1 把引擎的 APPDATA 重定向到 .forge_userdata/，其中包含：
+#   Godot/app_userdata、NuGet 包缓存、ilspycmd 工具链、
+#   analysis/（反编译出来的游戏与 RitsuLib 源码，不宜二次分发）、
+#   Godot/keystores、全部 *.log、backups/ 自动备份。
+.forge_userdata/
+
+# 上次使用的本机路径与界面偏好（D:/、E:/ 等绝对路径，换机即失效）
+/resources/settings.cfg
+
+# 扫描解包数据后生成的反推缓存，删除后会自动重建
+/resources/schema_cache.json
+
+# -----------------------------------------------------------------------------
+# 3. 导出产物 exports/
+#    每点一次「导出」都会整目录重新生成：<ModId>.json、.pck、.dll、src/、
+#    build.ps1/build.cmd、build.log、*-install.zip，以及它自己的 .godot/bin/obj。
+#    README 中提到的示例（exports/ForgeCustomModelExample 等）都可由工具一键重建。
+# -----------------------------------------------------------------------------
+/exports/
+
+# 若确实要把「生成的示例 Mod」也放上 GitHub：
+#   1) 注释掉上面这行 /exports/
+#   2) 取消下面细粒度规则的注释（只留清单与源码，仍排除构建中间物）
+#   3) 若要连 .pck / 安装包一起发布，再注释掉本节末尾的 *.pck 与 *.zip
+# /exports/**/.godot/
+# /exports/**/bin/
+# /exports/**/obj/
+# /exports/**/*.dll
+# /exports/**/*.pdb
+# /exports/**/*.pck
+# /exports/**/*.zip
+# /exports/**/build.log
+# /exports/**/.gdignore
+
+# 散落在别处的同类产物（例如手工打包时留下的压缩包、pck）
+*.pck
+*.zip
+
+# -----------------------------------------------------------------------------
+# 4. .NET / C# 构建产物
+#    工具本体只需 CardRelicForge.csproj + cs/ForgeBootstrap.cs；
+#    bin/、obj/ 在嵌套工程（exports/**、tools/model_runtime）里也会出现，故不加 / 锚定。
+# -----------------------------------------------------------------------------
+bin/
+obj/
+*.dll
+*.pdb
+*.mdb
+*.nupkg
+*.snupkg
+# Visual Studio / Rider / VS Code 的个人配置
+.vs/
+.idea/
+.vscode/
+*.csproj.user
+*.suo
+*.user
+
+# 说明：CardRelicForge.csproj 已用 <Compile Remove="exports/**" /> 和 "tools/**"
+# 排除这些生成的 C# 源码，因此无需再为它们写忽略规则。
+
+# -----------------------------------------------------------------------------
+# 5. 日志、临时文件与系统垃圾
+# -----------------------------------------------------------------------------
+*.log
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+*~
+# 设计文件的历史快照，例：designs/main.before-buff-fix-20261019-215739.json
+# 想留档就删掉下面这行
+designs/*.before-*.json
+# Windows / macOS
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.DS_Store
+$RECYCLE.BIN/
+
+# -----------------------------------------------------------------------------
+# 6. 密钥与凭据（绝不入库）
+# -----------------------------------------------------------------------------
+*.keystore
+*.jks
+*.p12
+*.pfx
+*.snk
+*.pem
+*.key
+.env
+.env.*
+
+# -----------------------------------------------------------------------------
+# 7. 本机专属覆盖文件
+# -----------------------------------------------------------------------------
+# forge-paths.txt 入库的是「模板」（只含注释）。如果你填了本机真实引擎路径，
+# 不要提交这处改动，可用：git update-index --skip-worktree forge-paths.txt
+# 或者把它改名为 forge-paths.example.txt，再取消下一行注释。
+# /forge-paths.txt
+
+# designs/*.json 是示例卡组（main.json、CharacterExample.json ...），默认随仓库发布。
+# 若只想公开工具本体、不带自己的设计，取消下一行注释。
+# /designs/
+
+# =============================================================================
+# 提交后，仓库根目录应当只有这些内容（用于自查）：
+#   project.godot  scenes/  ui/  core/  tools/  cs/
+#   CardRelicForge.csproj  run.cmd  run.ps1  forge-paths.txt  icon.svg  icon.svg.import
+#   designs/*.json  designs/character_assets/  resources/character_models/
+#   README.md  ARCHITECTURE.md  CHARACTER_*.md  ANCIENT_DIALOGUES.md  翻译.txt
+# 若出现 .godot/、.forge_userdata/、exports/、*.log、*.dll、bin/、obj/，
+# 说明它们已被早前提交过，需要：git rm -r --cached <路径> 后再提交。
+# =============================================================================

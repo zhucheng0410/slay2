@@ -1,0 +1,49 @@
+; CardRelicForge — standalone authoring tool for Slay the Spire 2 cards & relics.
+;
+; This is a *runtime* Godot project, not an editor plugin: launching the engine
+; against this folder opens the tool window directly. It never needs the Godot
+; editor and it never touches the sibling `designer/` project.
+
+config_version=5
+
+[application]
+
+config/name="CardRelicForge"
+config/description="自制卡牌效果与遗物效果的工具：可视化编辑、校验、一键导出可被游戏加载的 Mod。"
+config/features=PackedStringArray("4.5", "GL Compatibility")
+run/main_scene="res://scenes/main.tscn"
+config/icon="res://icon.svg"
+
+[display]
+
+; The window opens at this size and the app clamps it to the screen it launches
+; on (see `_apply_window_size` in ui/app.gd), so a small or scaled laptop gets a
+; window that fits instead of one hanging off the edges.
+window/size/viewport_width=1280
+window/size/viewport_height=800
+; Keep the window resizable and let the app re-fit the columns on drag.
+window/size/mode=0
+window/size/resizable=true
+; **Stretch must stay OFF for a desktop tool.**
+; With `canvas_items` the engine renders into a fixed virtual canvas and scales
+; it to the window, so the *viewport* size stops matching the *window* size.
+; `_apply_window_size()` resizes the window, the canvas then keeps its own
+; width, and the content is laid out against the wrong rect — which shows up as
+; the leftmost column being clipped. With stretch disabled the viewport IS the
+; window, 1 device pixel to 1 UI pixel, and the three columns fit exactly.
+window/stretch/mode="disabled"
+window/stretch/aspect="ignore"
+
+[dotnet]
+
+project/assembly_name="CardRelicForge"
+
+[gui]
+
+common/snap_controls_to_pixels=false
+theme/default_font_multichannel_signed_distance_field=true
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

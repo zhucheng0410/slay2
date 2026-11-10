@@ -1,0 +1,8 @@
+config_version=5
+[application]
+config/name="Forge Model Runtime Test"
+run/main_scene="res://test.tscn"
+[dotnet]
+project/assembly_name="ModelRuntimeTest"
+[rendering]
+renderer/rendering_method="gl_compatibility"
